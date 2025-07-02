@@ -246,10 +246,15 @@ footer {
     z-index: 999;
   }
 
-  .navbar-menu.active {
-    display: flex;
-  }
+  .navbar-menu {
+  display: none;
+  flex-direction: column;
 }
+
+.navbar-menu.active {
+  display: flex;
+}
+
 
 .foto-sobre {
   max-width: 100%;
