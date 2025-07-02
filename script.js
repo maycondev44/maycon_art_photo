@@ -18,3 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+
+function toggleMenu() {
+  const menu = document.getElementById("navbarMenu");
+  menu.classList.toggle("active");
+}
