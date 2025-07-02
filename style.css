@@ -235,3 +235,18 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+/* Esconde o botão de menu em telas maiores */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+  }
+}
