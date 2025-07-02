@@ -250,3 +250,13 @@ footer {
     display: flex;
   }
 }
+
+.foto-sobre {
+  max-width: 100%;
+  width: 300px; /* Você pode ajustar para 250px, 200px, etc. */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Centraliza a imagem */
+  border-radius: 10px; /* Opcional: bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra leve opcional */
+}
