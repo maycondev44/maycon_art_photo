@@ -23,3 +23,23 @@ function toggleMenu() {
   const menu = document.getElementById("navbarMenu");
   menu.classList.toggle("active");
 }
+
+const form = document.getElementById('formContato');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Envia o form via fetch para Formsubmit
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = "https://maycondev44.github.io/maycon_art_photo/obrigado.html";
+    } else {
+      alert('Erro ao enviar mensagem, tente novamente.');
+    }
+  }).catch(() => {
+    alert('Erro ao enviar mensagem, verifique a conexão.');
+  });
+});
