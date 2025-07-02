@@ -8,29 +8,22 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-  <div class="navbar-left">
-    <img src="img/minha-foto.jpg" alt="Foto do Maycon" class="navbar-photo" />
-  </div>
-  <ul class="navbar-menu">
-    <li><a href="index.html" class="nav-link">Início</a></li>
-    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-    <li><a href="contato.html" class="nav-link">Contato</a></li>
-  </ul>
-</nav>
-
-  <header>
-    <h1>Maycon Art Photo</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html" class="active">Contato</a></li>
-      </ul>
+ <header class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <img src="img/minha-foto1.jpg" alt="Foto do Maycon" class="navbar-photo" />
+      <span class="navbar-title">Maycon Art Photo</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar-menu" id="navbarMenu">
+      <a href="index.html">Início</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <main class="contato">
     <h2>Fale Comigo</h2>
