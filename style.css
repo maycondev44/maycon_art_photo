@@ -319,3 +319,36 @@ footer {
 .photo:hover .overlay {
   opacity: 1;
 }
+
+/* Página de obrigado */
+.obrigado {
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  background-color: #000;
+}
+
+.mensagem-obrigado h1 {
+  color: #ff0000;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.mensagem-obrigado p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.botao-voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #cc0000;
+}
