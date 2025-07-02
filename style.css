@@ -352,3 +352,30 @@ footer {
 .botao-voltar:hover {
   background-color: #cc0000;
 }
+
+.social-instagram {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-instagram a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E1306C; /* Cor do Instagram */
+  padding: 10px 16px;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.social-instagram a:hover {
+  background-color: #c1275b;
+}
+
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+}
