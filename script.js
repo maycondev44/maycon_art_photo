@@ -43,3 +43,28 @@ form.addEventListener('submit', (e) => {
     alert('Erro ao enviar mensagem, verifique a conexão.');
   });
 });
+
+document.getElementById('formContato').addEventListener('submit', function(event) {
+  event.preventDefault(); // evita envio tradicional
+
+  const form = event.target;
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = 'https://maycondev44.github.io/maycon_art_photo/obrigado.html';
+    } else {
+      alert('Erro ao enviar o formulário. Tente novamente.');
+    }
+  })
+  .catch(() => {
+    alert('Erro ao enviar o formulário. Verifique sua conexão.');
+  });
+});
