@@ -100,16 +100,27 @@ nav a:hover {
   margin: auto;
 }
 
-form label, form input, form textarea {
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label,
+form input,
+form textarea {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  background-color: #222;
+  color: white;
 }
 
 form button {
@@ -118,6 +129,7 @@ form button {
   padding: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Sobre */
@@ -127,33 +139,6 @@ form button {
   margin: auto;
 }
 
-/* Rodapé */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-}
-
-
-
-
-.navbar-menu li a {
-  color: #fff; /* branco */
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 .sobre-foto {
   display: flex;
   align-items: center;
@@ -169,7 +154,25 @@ footer {
   border: 3px solid #b22222;
 }
 
-/* Estilos gerais da navbar */
+.foto-sobre {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Rodapé */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Navbar */
 .navbar {
   background-color: #111;
   padding: 10px 20px;
@@ -197,9 +200,13 @@ footer {
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
-/* Menu padrão (desktop) */
+.navbar-title:hover {
+  color: #b22222;
+}
+
 .navbar-menu {
   display: flex;
   gap: 20px;
@@ -227,56 +234,35 @@ footer {
   cursor: pointer;
 }
 
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #111;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    padding: 15px 20px;
-    z-index: 999;
-  }
-
-  .navbar-menu {
-  display: none;
-  flex-direction: column;
+/* Social Instagram */
+.social-instagram {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.navbar-menu.active {
-  display: flex;
-}
-
-
-.foto-sobre {
-  max-width: 100%;
-  width: 300px; /* Você pode ajustar para 250px, 200px, etc. */
-  height: auto;
-  display: block;
-  margin: 20px auto; /* Centraliza a imagem */
-  border-radius: 10px; /* Opcional: bordas arredondadas */
-  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra leve opcional */
-}
-
-.navbar-title {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+.social-instagram a {
   text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E1306C;
+  padding: 10px 16px;
+  border-radius: 30px;
+  transition: background 0.3s;
 }
 
-.navbar-title:hover {
-  color: #b22222;
+.social-instagram a:hover {
+  background-color: #c1275b;
 }
 
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+}
+
+/* Galeria com overlay */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -297,12 +283,10 @@ footer {
   border-radius: 10px;
 }
 
-/* Zoom ao passar o mouse */
 .photo:hover img {
   transform: scale(1.1);
 }
 
-/* Overlay de texto */
 .overlay {
   position: absolute;
   top: 0;
@@ -358,34 +342,35 @@ footer {
   background-color: #cc0000;
 }
 
-.social-instagram {
-  text-align: center;
-  margin: 20px 0;
-}
+/* Responsivo geral */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
-.social-instagram a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #E1306C; /* Cor do Instagram */
-  padding: 10px 16px;
-  border-radius: 30px;
-  transition: background 0.3s;
-}
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    z-index: 999;
+  }
 
-.social-instagram a:hover {
-  background-color: #c1275b;
-}
-
-.icon-instagram {
-  width: 24px;
-  height: 24px;
+  .navbar-menu.active {
+    display: flex;
+  }
 }
 
 @media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
   .social-instagram a {
     padding: 10px 14px;
     font-size: 14px;
@@ -396,4 +381,10 @@ footer {
     height: 20px;
   }
 }
-/* Estilos adicionais para o formulário de contato */
+
+ /* Estilos adicionais para o formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
