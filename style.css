@@ -366,12 +366,49 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {}
   nav ul {
     flex-direction: column;
   }
 
-  .social-instagram a {
+
+ /* Estilos adicionais para o formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-instagram {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.instagram-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E1306C; /* cor Instagram */
+  padding: 10px 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-link:hover {
+  background-color: #c1275b;
+}
+
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .instagram-link {
     padding: 10px 14px;
     font-size: 14px;
   }
@@ -380,11 +417,4 @@ footer {
     width: 20px;
     height: 20px;
   }
-}
-
- /* Estilos adicionais para o formulário de contato */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
