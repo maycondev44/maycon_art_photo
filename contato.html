@@ -26,7 +26,7 @@
   <main class="contato">
     <h2>Fale Comigo</h2>
 
-    <form id="form" action="https://formspree.io/f/movwbdln" method="POST">
+    <form id="formcontato" action="https://formspree.io/f/movwbdln" method="POST">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required />
 
@@ -54,9 +54,9 @@
     <p>&copy; 2025 Maycon Art Photo</p>
   </footer>
 
-  <!-- Script para envio do formulário -->
+   <!-- Script para envio do formulário -->
   <script>
-    const form = document.getElementById("form");
+    const form = document.getElementById("formcontato");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const data = new FormData(form);
@@ -73,6 +73,12 @@
         console.error(error);
       });
     });
+
+    // Função do menu hamburguer
+    function toggleMenu() {
+      const menu = document.getElementById("navbarMenu");
+      menu.classList.toggle("active");
+    }
   </script>
 
   <script src="script.js"></script>
